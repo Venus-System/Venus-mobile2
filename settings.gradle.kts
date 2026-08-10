@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "venusMobile"
+rootProject.name = "VenusMobile"
 include(":app")
  
