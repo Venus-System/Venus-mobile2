@@ -1,6 +1,8 @@
-package com.example.venusmobile;
+package com.example.venusmobile.view;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,7 +10,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.venusmobile.R;
+
+public class BemVindoActivity extends AppCompatActivity {
+    Button btnLogin;
+    Button btnCadastrar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +26,14 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        btnLogin = findViewById(R.id.ButtonEntrar);
+        btnCadastrar = findViewById(R.id.buttonCriarConta);
+
+        btnLogin.setOnClickListener(v ->
+                startActivity(new Intent(this, LoginActivity.class)));
+
+        btnCadastrar.setOnClickListener(v ->
+                startActivity(new Intent(this, CadastrarActivity.class)));
     }
+
 }

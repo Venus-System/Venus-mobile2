@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradiente_venus"
+    tools:context=".activity_cadastrar">
+
+    <!-- Card começa mais alto que o do login: são 3 campos em vez de 2 -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCardTopo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.32" />
+
+    <ImageButton
+        android:id="@+id/btnVoltar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Voltar"
+        android:scaleType="center"
+        android:src="@drawable/ic_seta_voltar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Forma roxa decorativa. Primeira da lista = desenhada atrás de tudo -->
+
+    <!-- Ilustração: ocupa a área roxa acima do card -->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="379dp"
+        android:layout_height="391dp"
+        android:layout_marginBottom="-147dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardCadastrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/cabelo_cadastro" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardCadastrar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_card_branco"
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineCardTopo">
+
+        <TextView
+            android:id="@+id/textTituloCadastrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Cadastrar"
+            android:textColor="@color/preto_texto"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editSenha"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:autofillHints="newPassword"
+            android:background="@drawable/bg_input_pill"
+            android:hint="Senha"
+            android:inputType="textPassword"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:textColor="@color/preto_texto"
+            android:textColorHint="@color/cinza_hint"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editEmail" />
+
+        <EditText
+            android:id="@+id/editConfirmarSenha"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:autofillHints="newPassword"
+            android:background="@drawable/bg_input_pill"
+            android:hint="Confirme a senha"
+            android:inputType="textPassword"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:textColor="@color/preto_texto"
+            android:textColorHint="@color/cinza_hint"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editSenha" />
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:autofillHints="emailAddress"
+            android:background="@drawable/bg_input_pill"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:textColor="@color/preto_texto"
+            android:textColorHint="@color/cinza_hint"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textTituloCadastrar" />
+
+        <!-- AppCompatButton, não Button: MaterialButton ignora android:background -->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCriarConta"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_botao_gradiente"
+            android:text="Criar conta"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editConfirmarSenha" />
+
+        <TextView
+            android:id="@+id/textOuEntreCom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:text="Ou entre com"
+            android:textColor="@color/preto_texto"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnCriarConta" />
+
+        <View
+            android:id="@+id/linhaEsquerda"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/cinza_linha"
+            app:layout_constraintBottom_toBottomOf="@+id/textOuEntreCom"
+            app:layout_constraintEnd_toStartOf="@+id/textOuEntreCom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textOuEntreCom" />
+
+        <View
+            android:id="@+id/linhaDireita"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/cinza_linha"
+            app:layout_constraintBottom_toBottomOf="@+id/textOuEntreCom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textOuEntreCom"
+            app:layout_constraintTop_toTopOf="@+id/textOuEntreCom" />
+
+        <ImageButton
+            android:id="@+id/btnGoogle"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_input_pill"
+            android:contentDescription="Cadastrar com o Google"
+            android:scaleType="center"
+            android:src="@drawable/ic_google"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textOuEntreCom" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
