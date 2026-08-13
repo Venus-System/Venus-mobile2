@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ripple por fora para manter o feedback de toque, já que o fundo é um gradiente -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#40FFFFFF">
+
+    <item>
+        <shape android:shape="rectangle">
+
+            <gradient
+                android:angle="0"
+                android:startColor="#FF5B0FA8"
+                android:endColor="#FF8C1556"
+                android:type="linear" />
+
+            <corners android:radius="28dp" />
+
+        </shape>
+    </item>
+
+</ripple>
