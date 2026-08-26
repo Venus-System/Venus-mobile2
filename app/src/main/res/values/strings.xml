@@ -1,3 +1,85 @@
 <resources>
     <string name="app_name">VenusMobile</string>
+
+    <!-- Bem vindo -->
+    <string name="bem_vindo_titulo">Bem vindo</string>
+    <string name="bem_vindo_subtitulo">Cuide da sua beleza de forma simples</string>
+
+    <!-- Acoes -->
+    <string name="acao_criar_conta">Criar conta</string>
+    <string name="acao_entrar">Entrar</string>
+    <string name="acao_logar">Logar</string>
+    <string name="acao_enviar_email">Enviar email</string>
+
+    <!-- Rotulos dos campos -->
+    <string name="campo_nome">Nome</string>
+    <string name="campo_email">Email</string>
+    <string name="campo_senha">Senha</string>
+
+    <!-- Textos de exemplo dentro dos campos -->
+    <string name="hint_nome">Como podemos te chamar</string>
+    <string name="hint_email">voce@email.com</string>
+    <string name="hint_senha">Mínimo 8 caracteres</string>
+    <string name="ajuda_senha">Use 8+ caracteres com letras, números e símbolos</string>
+
+    <string name="acao_fazer_login">Fazer Login</string>
+    <string name="desc_mostrar_senha">Mostrar senha</string>
+
+    <!-- Estados durante a requisicao -->
+    <string name="estado_entrando">Entrando…</string>
+    <string name="estado_criando_conta">Criando conta…</string>
+    <string name="estado_enviando">Enviando…</string>
+
+    <!-- Retornos -->
+    <string name="login_sucesso">Login realizado com sucesso</string>
+    <string name="cadastro_sucesso">Conta criada com sucesso</string>
+    <string name="recuperar_email_enviado">Se este email estiver cadastrado, enviamos um link para redefinir a senha. Verifique também a caixa de spam.</string>
+    <string name="erro_google">Não foi possível entrar com o Google. Tente novamente.</string>
+
+    <!-- Questionario -->
+    <string name="pesquisa_titulo">Pesquisa de usuário</string>
+    <string name="pesquisa_subtitulo">Suas respostas vão nos ajudar a personalizar suas análises de produtos.</string>
+    <string name="pesquisa_responder_depois"><u>Responder mais tarde →</u></string>
+
+    <string name="pergunta_tipo_cabelo">Qual seu tipo de cabelo?</string>
+    <!-- O <u> é interpretado pelo TextView: sublinha sem precisar de código -->
+    <string name="pergunta_ajuda_cabelo"><u>Qual é meu tipo de cabelo?</u></string>
+    <string name="pergunta_escolha_uma">Escolha uma opção para continuar</string>
+
+    <string name="cabelo_1">1</string>
+    <string name="cabelo_2a">2A</string>
+    <string name="cabelo_2c">2C</string>
+    <string name="cabelo_3a">3A</string>
+    <string name="cabelo_3b">3B</string>
+    <string name="cabelo_3c">3C</string>
+
+    <string name="desc_avancar">Avançar</string>
+
+    <!-- Menu provisorio -->
+    <string name="menu_provisorio">Menu</string>
+    <string name="menu_logado_como">Logado como %1$s\n%2$s</string>
+    <string name="menu_sem_usuario">Nenhum usuário autenticado</string>
+    <string name="acao_sair">Sair</string>
+    <string name="acao_refazer_questionario"><u>Refazer questionário (teste)</u></string>
+    <string name="questionario_reiniciado">Questionário liberado. Saia e entre de novo.</string>
+
+    <!-- Login -->
+    <string name="login_titulo">Entrar</string>
+    <string name="login_esqueci_senha">Esqueci minha senha</string>
+
+    <!-- Cadastro -->
+    <string name="cadastro_titulo">Cadastrar</string>
+
+    <!-- Recuperar senha -->
+    <string name="recuperar_titulo">Recuperar senha</string>
+    <string name="recuperar_subtitulo">Coloque o email que você quer alterar a senha</string>
+
+    <!-- Login social -->
+    <string name="ou_entre_com">Ou entre com</string>
+
+    <!-- Descricoes para leitor de tela -->
+    <string name="desc_voltar">Voltar</string>
+    <string name="desc_entrar_google">Entrar com o Google</string>
+    <string name="desc_cadastrar_google">Cadastrar com o Google</string>
+
 </resources>

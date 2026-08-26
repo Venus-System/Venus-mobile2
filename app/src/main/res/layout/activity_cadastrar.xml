@@ -6,15 +6,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_gradiente_venus"
-    tools:context=".activity_cadastrar">
+    tools:context=".view.CadastrarActivity">
 
-    <!-- Card começa mais alto que o do login: são 3 campos em vez de 2 -->
+    <!-- Card ocupa 80% da tela: sao 3 campos com rotulo, e sem rolagem
+         tudo precisa caber de uma vez. Sobra pouco da ilustracao, e proposital. -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineCardTopo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.32" />
+        app:layout_constraintGuide_percent="0.20" />
 
     <ImageButton
         android:id="@+id/btnVoltar"
@@ -49,8 +50,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/bg_card_branco"
-        android:paddingStart="28dp"
-        android:paddingEnd="28dp"
+        android:paddingStart="@dimen/card_padding_lateral"
+        android:paddingEnd="@dimen/card_padding_lateral"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,102 +59,102 @@
 
         <TextView
             android:id="@+id/textTituloCadastrar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="Cadastrar"
-            android:textColor="@color/preto_texto"
-            android:textSize="32sp"
+            style="@style/TituloCard"
+            android:layout_marginTop="@dimen/espaco_secao"
+            android:text="@string/cadastro_titulo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/editSenha"
-            android:layout_width="0dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="16dp"
-            android:autofillHints="newPassword"
-            android:background="@drawable/bg_input_pill"
-            android:hint="Senha"
-            android:inputType="textPassword"
-            android:paddingStart="24dp"
-            android:paddingEnd="24dp"
-            android:textColor="@color/preto_texto"
-            android:textColorHint="@color/cinza_hint"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editEmail" />
-
-        <EditText
-            android:id="@+id/editConfirmarSenha"
-            android:layout_width="0dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="16dp"
-            android:autofillHints="newPassword"
-            android:background="@drawable/bg_input_pill"
-            android:hint="Confirme a senha"
-            android:inputType="textPassword"
-            android:paddingStart="24dp"
-            android:paddingEnd="24dp"
-            android:textColor="@color/preto_texto"
-            android:textColorHint="@color/cinza_hint"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editSenha" />
-
-        <EditText
-            android:id="@+id/editEmail"
-            android:layout_width="0dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="24dp"
-            android:autofillHints="emailAddress"
-            android:background="@drawable/bg_input_pill"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:paddingStart="24dp"
-            android:paddingEnd="24dp"
-            android:textColor="@color/preto_texto"
-            android:textColorHint="@color/cinza_hint"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+        <TextView
+            android:id="@+id/labelNome"
+            style="@style/LabelCampo"
+            android:layout_marginTop="@dimen/espaco_grande"
+            android:text="@string/campo_nome"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textTituloCadastrar" />
 
-        <!-- AppCompatButton, não Button: MaterialButton ignora android:background -->
+        <EditText
+            android:id="@+id/editNome"
+            style="@style/CampoVenus"
+            android:layout_marginTop="6dp"
+            android:autofillHints="name"
+            android:hint="@string/hint_nome"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelNome" />
 
+        <TextView
+            android:id="@+id/labelEmail"
+            style="@style/LabelCampo"
+            android:layout_marginTop="@dimen/espaco_medio"
+            android:text="@string/campo_email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editNome" />
+
+        <EditText
+            android:id="@+id/editEmail"
+            style="@style/CampoVenus"
+            android:layout_marginTop="6dp"
+            android:autofillHints="emailAddress"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelEmail" />
+
+        <TextView
+            android:id="@+id/labelSenha"
+            style="@style/LabelCampo"
+            android:layout_marginTop="@dimen/espaco_medio"
+            android:text="@string/campo_senha"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editEmail" />
+
+        <!-- drawableEnd desenha o olho; o toggle em si precisa de codigo -->
+        <EditText
+            android:id="@+id/editSenha"
+            style="@style/CampoVenus"
+            android:layout_marginTop="6dp"
+            android:autofillHints="newPassword"
+            android:drawableEnd="@drawable/ic_olho"
+            android:hint="@string/hint_senha"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelSenha" />
+
+        <TextView
+            android:id="@+id/textAjudaSenha"
+            style="@style/TextoAjuda"
+            android:layout_marginTop="6dp"
+            android:text="@string/ajuda_senha"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editSenha" />
+
+        <!-- AppCompatButton, não Button: MaterialButton ignora android:background -->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnCriarConta"
-            android:layout_width="0dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/bg_botao_gradiente"
-            android:text="Criar conta"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="20sp"
+            style="@style/BotaoGradiente"
+            android:layout_marginTop="@dimen/espaco_grande"
+            android:text="@string/acao_criar_conta"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editConfirmarSenha" />
+            app:layout_constraintTop_toBottomOf="@+id/textAjudaSenha" />
 
         <TextView
             android:id="@+id/textOuEntreCom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="@dimen/espaco_grande"
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
-            android:text="Ou entre com"
+            android:text="@string/ou_entre_com"
             android:textColor="@color/preto_texto"
-            android:textSize="14sp"
+            android:textSize="@dimen/texto_corpo"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnCriarConta" />
 
@@ -179,15 +180,10 @@
 
         <ImageButton
             android:id="@+id/btnGoogle"
-            android:layout_width="0dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/bg_input_pill"
-            android:contentDescription="Cadastrar com o Google"
-            android:scaleType="center"
-            android:src="@drawable/ic_google"
+            style="@style/BotaoGoogle"
+            android:layout_marginTop="@dimen/espaco_medio"
+            android:contentDescription="@string/desc_cadastrar_google"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textOuEntreCom" />
 

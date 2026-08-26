@@ -6,15 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_gradiente_venus"
-    tools:context=".login">
+    tools:context=".view.LoginActivity">
 
-    <!-- Define onde o card começa: 38% da altura da tela -->
+    <!-- Card ocupa 72% da tela: sem rolagem, tudo precisa caber de uma vez -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineCardTopo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.38" />
+        app:layout_constraintGuide_percent="0.28" />
 
     <ImageButton
         android:id="@+id/btnVoltar"
@@ -32,8 +32,8 @@
     <!-- Forma roxa decorativa. Primeira da lista = desenhada atrás de tudo -->
     <ImageView
         android:id="@+id/imgFormaFundo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="364dp"
+        android:layout_height="295dp"
         android:importantForAccessibility="no"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="@+id/guidelineCardTopo"
@@ -67,87 +67,76 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/bg_card_branco"
-        android:paddingStart="28dp"
-        android:paddingEnd="28dp"
+        android:paddingStart="@dimen/card_padding_lateral"
+        android:paddingEnd="@dimen/card_padding_lateral"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guidelineCardTopo"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="@+id/guidelineCardTopo">
 
         <TextView
             android:id="@+id/textTituloEntrar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="Entrar"
-            android:textColor="@color/preto_texto"
-            android:textSize="32sp"
+            style="@style/TituloCard"
+            android:layout_marginTop="@dimen/espaco_secao"
+            android:text="@string/login_titulo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/editEmail"
-            android:layout_width="0dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="28dp"
-            android:autofillHints="emailAddress"
-            android:background="@drawable/bg_input_pill"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:paddingStart="24dp"
-            android:paddingEnd="24dp"
-            android:textColor="@color/preto_texto"
-            android:textColorHint="@color/cinza_hint"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+        <TextView
+            android:id="@+id/labelEmail"
+            style="@style/LabelCampo"
+            android:layout_marginTop="@dimen/espaco_grande"
+            android:text="@string/campo_email"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textTituloEntrar" />
 
         <EditText
-            android:id="@+id/editSenha"
-            android:layout_width="0dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="16dp"
-            android:autofillHints="password"
-            android:background="@drawable/bg_input_pill"
-            android:hint="Senha"
-            android:inputType="textPassword"
-            android:paddingStart="24dp"
-            android:paddingEnd="24dp"
-            android:textColor="@color/preto_texto"
-            android:textColorHint="@color/cinza_hint"
-            android:textSize="16sp"
+            android:id="@+id/editEmail"
+            style="@style/CampoVenus"
+            android:layout_marginTop="6dp"
+            android:autofillHints="emailAddress"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelEmail" />
+
+        <TextView
+            android:id="@+id/labelSenha"
+            style="@style/LabelCampo"
+            android:layout_marginTop="@dimen/espaco_medio"
+            android:text="@string/campo_senha"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editEmail" />
 
+        <!-- drawableEnd desenha o olho; o toggle em si precisa de codigo -->
+        <EditText
+            android:id="@+id/editSenha"
+            style="@style/CampoVenus"
+            android:layout_marginTop="6dp"
+            android:autofillHints="password"
+            android:drawableEnd="@drawable/ic_olho"
+            android:hint="@string/hint_senha"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelSenha" />
+
         <TextView
             android:id="@+id/textEsqueciSenha"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:padding="4dp"
-            android:text="Esqueci minha senha"
-            android:textColor="@color/roxo_link"
-            android:textSize="13sp"
+            style="@style/LinkVenus"
+            android:layout_marginTop="6dp"
+            android:text="@string/login_esqueci_senha"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editSenha" />
 
         <!-- AppCompatButton, não Button: MaterialButton ignora android:background -->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnLogar"
-            android:layout_width="0dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="18dp"
-            android:background="@drawable/bg_botao_gradiente"
-            android:text="Logar"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="20sp"
+            style="@style/BotaoGradiente"
+            android:layout_marginTop="@dimen/espaco_medio"
+            android:text="@string/acao_fazer_login"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textEsqueciSenha" />
@@ -193,15 +182,10 @@
 
         <ImageButton
             android:id="@+id/btnGoogle"
-            android:layout_width="0dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/bg_input_pill"
-            android:contentDescription="Entrar com o Google"
-            android:scaleType="center"
-            android:src="@drawable/ic_google"
+            style="@style/BotaoGoogle"
+            android:layout_marginTop="@dimen/espaco_medio"
+            android:contentDescription="@string/desc_entrar_google"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textOuEntreCom" />
 

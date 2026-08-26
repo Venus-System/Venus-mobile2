@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Espacamentos -->
+    <dimen name="espaco_pequeno">8dp</dimen>
+    <dimen name="espaco_medio">16dp</dimen>
+    <dimen name="espaco_grande">24dp</dimen>
+    <dimen name="espaco_secao">32dp</dimen>
+
+    <!-- Card branco das telas de autenticacao -->
+    <dimen name="card_padding_lateral">28dp</dimen>
+    <dimen name="card_raio">32dp</dimen>
+
+    <!-- Campos e botoes: a altura e o dobro do raio, e o que faz a pilula -->
+    <dimen name="altura_campo">56dp</dimen>
+    <dimen name="raio_pilula">28dp</dimen>
+    <dimen name="raio_campo">10dp</dimen>
+    <dimen name="padding_interno_campo">16dp</dimen>
+
+    <!-- Botao de voltar: 48dp e o alvo minimo de toque recomendado -->
+    <dimen name="area_toque_minima">48dp</dimen>
+
+    <!-- Questionario -->
+    <dimen name="botao_circular">56dp</dimen>
+    <dimen name="altura_opcao">44dp</dimen>
+
+    <!-- Tipografia -->
+    <dimen name="texto_titulo_tela">36sp</dimen>
+    <dimen name="texto_titulo_card">32sp</dimen>
+    <dimen name="texto_botao">20sp</dimen>
+    <dimen name="texto_campo">16sp</dimen>
+    <dimen name="texto_corpo">14sp</dimen>
+    <dimen name="texto_link">13sp</dimen>
+    <dimen name="texto_label">12sp</dimen>
+    <dimen name="texto_ajuda">11sp</dimen>
+
+</resources>

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_gradiente_venus"
-    tools:context=".acitivity_recuperar_senha">
+    tools:context=".view.RecuperarSenhaActivity">
 
     <!-- Define onde o card começa: 42% da altura da tela -->
     <androidx.constraintlayout.widget.Guideline
@@ -44,26 +44,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <!-- O card rola: em tela baixa, ou com o teclado aberto, o conteudo
+         nao cabe. fillViewport faz o fundo cobrir o card inteiro quando sobra. -->
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/cardRecuperar"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/bg_card_branco"
-        android:paddingStart="28dp"
-        android:paddingEnd="28dp"
+        android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guidelineCardTopo">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conteudoCardRecuperar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/card_padding_lateral"
+        android:paddingEnd="@dimen/card_padding_lateral"
+        android:paddingBottom="@dimen/espaco_grande">
+
         <TextView
             android:id="@+id/textTituloRecuperar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="Recuperar senha"
-            android:textColor="@color/preto_texto"
-            android:textSize="32sp"
+            style="@style/TituloCard"
+            android:layout_marginTop="@dimen/espaco_secao"
+            android:text="@string/recuperar_titulo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -72,50 +78,48 @@
             android:id="@+id/textSubtituloRecuperar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="@dimen/espaco_medio"
+            android:layout_marginTop="@dimen/espaco_pequeno"
+            android:layout_marginEnd="@dimen/espaco_medio"
             android:gravity="center_horizontal"
-            android:text="Coloque o email que você quer alterar a senha"
-            android:textColor="@color/preto_texto"
-            android:textSize="14sp"
+            android:text="@string/recuperar_subtitulo"
+            android:textColor="@color/texto_ajuda"
+            android:textSize="@dimen/texto_corpo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textTituloRecuperar" />
 
-        <EditText
-            android:id="@+id/editEmail"
-            android:layout_width="0dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="28dp"
-            android:autofillHints="emailAddress"
-            android:background="@drawable/bg_input_pill"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:paddingStart="24dp"
-            android:paddingEnd="24dp"
-            android:textColor="@color/preto_texto"
-            android:textColorHint="@color/cinza_hint"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
+        <TextView
+            android:id="@+id/labelEmail"
+            style="@style/LabelCampo"
+            android:layout_marginTop="@dimen/espaco_grande"
+            android:text="@string/campo_email"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textSubtituloRecuperar" />
+
+        <EditText
+            android:id="@+id/editEmail"
+            style="@style/CampoVenus"
+            android:layout_marginTop="6dp"
+            android:autofillHints="emailAddress"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelEmail" />
 
         <!-- AppCompatButton, não Button: MaterialButton ignora android:background -->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnEnviarEmail"
-            android:layout_width="0dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/bg_botao_gradiente"
-            android:text="Enviar email"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="20sp"
+            style="@style/BotaoGradiente"
+            android:layout_marginTop="@dimen/espaco_grande"
+            android:text="@string/acao_enviar_email"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editEmail" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

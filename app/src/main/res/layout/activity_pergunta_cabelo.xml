@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradiente_venus"
+    tools:context=".view.PerguntaCabeloActivity">
+
+    <!-- Onde o card branco comeca -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCardTopo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.38" />
+
+    <!-- Ate onde a ilustracao desce. Fica abaixo da guideline do card
+         de proposito: e essa diferenca que cria a sobreposicao. -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineFimIlustracao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <ImageButton
+        android:id="@+id/btnVoltar"
+        style="@style/BotaoVoltar"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/desc_voltar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textPergunta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/espaco_grande"
+        android:layout_marginEnd="@dimen/espaco_secao"
+        android:lineSpacingMultiplier="0.95"
+        android:text="@string/pergunta_tipo_cabelo"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVoltar" />
+
+    <!-- Card branco. Declarado antes da ilustracao para ficar atras dela. -->
+    <View
+        android:id="@+id/cardOpcoes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/espaco_medio"
+        android:layout_marginEnd="@dimen/espaco_medio"
+        android:layout_marginBottom="@dimen/espaco_medio"
+        android:background="@drawable/bg_card_opcoes"
+        app:layout_constraintBottom_toTopOf="@+id/textAjudaCabelo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineCardTopo" />
+
+    <!-- A plataforma clara ja vem na imagem: ela se funde com o card -->
+
+    <!-- Lista separada do card: assim ela se ancora na ilustracao, sem
+         depender de padding chutado para desviar da sobreposicao. -->
+    <ImageView
+        android:id="@+id/imgPergunta"
+        android:layout_width="453dp"
+        android:layout_height="217dp"
+        android:layout_marginBottom="-6dp"
+        android:importantForAccessibility="no"
+        android:scaleType="fitCenter"
+        android:src="@drawable/perguntas"
+        app:layout_constraintBottom_toBottomOf="@+id/guidelineFimIlustracao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPergunta"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollOpcoes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/espaco_pequeno"
+        android:layout_marginBottom="@dimen/espaco_grande"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="@+id/cardOpcoes"
+        app:layout_constraintEnd_toEndOf="@+id/cardOpcoes"
+        app:layout_constraintStart_toStartOf="@+id/cardOpcoes"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineFimIlustracao">
+
+        <LinearLayout
+            android:id="@+id/listaOpcoes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/espaco_grande"
+            android:paddingEnd="@dimen/espaco_grande">
+
+            <TextView
+                style="@style/OpcaoPergunta"
+                android:layout_width="match_parent"
+                android:tag="1"
+                android:text="@string/cabelo_1" />
+
+            <TextView
+                style="@style/OpcaoPergunta"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/espaco_pequeno"
+                android:tag="2A"
+                android:text="@string/cabelo_2a" />
+
+            <TextView
+                style="@style/OpcaoPergunta"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/espaco_pequeno"
+                android:tag="2C"
+                android:text="@string/cabelo_2c" />
+
+            <TextView
+                style="@style/OpcaoPergunta"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/espaco_pequeno"
+                android:tag="3A"
+                android:text="@string/cabelo_3a" />
+
+            <TextView
+                style="@style/OpcaoPergunta"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/espaco_pequeno"
+                android:tag="3B"
+                android:text="@string/cabelo_3b" />
+
+            <TextView
+                style="@style/OpcaoPergunta"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/espaco_pequeno"
+                android:tag="3C"
+                android:text="@string/cabelo_3c" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/textAjudaCabelo"
+        style="@style/LinkClaro"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/espaco_grande"
+        android:layout_marginEnd="@dimen/espaco_pequeno"
+        android:layout_marginBottom="@dimen/espaco_grande"
+        android:gravity="center"
+        android:text="@string/pergunta_ajuda_cabelo"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnAvancar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnAvancar"
+        style="@style/BotaoAvancar"
+        android:layout_marginEnd="@dimen/espaco_medio"
+        android:contentDescription="@string/desc_avancar"
+        app:layout_constraintBottom_toBottomOf="@+id/textAjudaCabelo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textAjudaCabelo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
