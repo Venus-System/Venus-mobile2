@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_gradiente_venus"
-    tools:context=".MainActivity">
+    tools:context=".view.BemVindoActivity">
 
     <!-- Decorativo. Primeiro da lista = desenhado atrás de todo o resto -->
     <ImageView
@@ -27,9 +27,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:text="Bem vindo"
-        android:textColor="#FFFFFF"
-        android:textSize="36sp"
+        android:text="@string/bem_vindo_titulo"
+        android:textColor="@color/white"
+        android:textSize="@dimen/texto_titulo_tela"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -39,8 +39,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="Cuide da sua beleza de forma simples"
-        android:textColor="#FFFFFF"
+        android:text="@string/bem_vindo_subtitulo"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -88,36 +88,28 @@
 
     <Button
         android:id="@+id/buttonCriarConta"
+        style="@style/BotaoBranco"
         android:layout_width="0dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="@dimen/espaco_secao"
+        android:layout_marginEnd="@dimen/espaco_secao"
         android:layout_marginBottom="15dp"
-        android:text="Criar conta"
-        android:textColor="@color/roxo_venus"
-        android:textSize="24sp"
-        app:backgroundTint="@color/white"
-        app:cornerRadius="28dp"
+        android:text="@string/acao_criar_conta"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/ButtonEntrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/ButtonEntrar"
-        style="@style/Widget.Material3.Button.OutlinedButton"
+        style="@style/BotaoContorno"
         android:layout_width="0dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="@dimen/espaco_secao"
+        android:layout_marginEnd="@dimen/espaco_secao"
         android:layout_marginBottom="30dp"
-        android:text="Entrar"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:cornerRadius="28dp"
+        android:text="@string/acao_entrar"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:strokeColor="@color/white"
-        app:strokeWidth="1.5dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

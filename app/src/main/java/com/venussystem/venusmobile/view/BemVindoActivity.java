@@ -1,4 +1,4 @@
-package com.example.venusmobile.view;
+package com.venussystem.venusmobile.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,9 +10,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.venusmobile.R;
+import com.venussystem.venusmobile.R;
+import com.venussystem.venusmobile.repository.AutenticacaoRepository;
 
 public class BemVindoActivity extends AppCompatActivity {
+
+    private final AutenticacaoRepository repository = new AutenticacaoRepository();
+
     Button btnLogin;
     Button btnCadastrar;
 
@@ -26,6 +30,7 @@ public class BemVindoActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
         btnLogin = findViewById(R.id.ButtonEntrar);
         btnCadastrar = findViewById(R.id.buttonCriarConta);
 
@@ -36,4 +41,20 @@ public class BemVindoActivity extends AppCompatActivity {
                 startActivity(new Intent(this, CadastrarActivity.class)));
     }
 
+    /**
+     * Pulo automatico para quem ja tem sessao ativa.
+     *
+     * DESLIGADO PARA TESTES: com o pulo ligado, quem ja logou uma vez nunca
+     * mais consegue ver esta tela nem a de login sem limpar os dados do app.
+     *
+     * Para religar, basta descomentar o corpo do metodo.
+     */
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        // if (repository.temSessaoAtiva()) {
+        //     NavegacaoPosLogin.seguir(this);
+        // }
+    }
 }

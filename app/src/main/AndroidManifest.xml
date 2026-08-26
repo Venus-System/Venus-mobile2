@@ -12,17 +12,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VenusMobile" >
         <activity
-            android:name=".view.tela_Inicial_pergunta"
+            android:name=".view.MenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.PesquisaInicialActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.PerguntaCabeloActivity"
             android:exported="false" />
         <activity
             android:name=".view.RecuperarSenhaActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- adjustPan e nao adjustResize: sem rolagem, encolher a janela
+             cortaria o card. O pan desliza a tela para manter o campo visivel. -->
         <activity
             android:name=".view.CadastrarActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".view.LoginActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".view.BemVindoActivity"
             android:exported="true" >

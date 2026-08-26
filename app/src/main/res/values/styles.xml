@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ===== Card branco das telas de autenticacao ===== -->
+    <style name="CardVenus">
+        <item name="android:background">@drawable/bg_card_branco</item>
+        <item name="android:paddingStart">@dimen/card_padding_lateral</item>
+        <item name="android:paddingEnd">@dimen/card_padding_lateral</item>
+    </style>
+
+    <!-- ===== Campos de texto ===== -->
+    <style name="CampoVenus">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/altura_campo</item>
+        <item name="android:background">@drawable/bg_input_borda</item>
+        <item name="android:paddingStart">@dimen/padding_interno_campo</item>
+        <item name="android:paddingEnd">@dimen/padding_interno_campo</item>
+        <item name="android:textColor">@color/preto_texto</item>
+        <item name="android:textColorHint">@color/cinza_hint</item>
+        <item name="android:textSize">@dimen/texto_campo</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <!-- Rotulo acima do campo -->
+    <style name="LabelCampo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/texto_label</item>
+        <item name="android:textSize">@dimen/texto_label</item>
+    </style>
+
+    <!-- Texto de apoio abaixo do campo -->
+    <style name="TextoAjuda">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/texto_ajuda</item>
+        <item name="android:textSize">@dimen/texto_ajuda</item>
+    </style>
+
+    <!-- Botao do Google: branco com borda, igual aos campos -->
+    <style name="BotaoGoogle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/altura_campo</item>
+        <item name="android:background">@drawable/bg_input_borda</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:src">@drawable/ic_google</item>
+    </style>
+
+    <!-- ===== Botoes ===== -->
+
+    <!-- Gradiente roxo->magenta. Usar com AppCompatButton: o MaterialButton
+         ignora android:background e o gradiente nao apareceria. -->
+    <style name="BotaoGradiente">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/altura_campo</item>
+        <item name="android:background">@drawable/bg_botao_gradiente</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/texto_botao</item>
+    </style>
+
+    <!-- Fundo branco, texto roxo (botao "Criar conta" da tela de boas-vindas) -->
+    <style name="BotaoBranco" parent="Widget.Material3.Button">
+        <item name="android:layout_height">@dimen/altura_campo</item>
+        <item name="android:textColor">@color/roxo_venus</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="cornerRadius">@dimen/raio_pilula</item>
+    </style>
+
+    <!-- Contorno branco, fundo transparente (botao "Entrar" da tela de boas-vindas) -->
+    <style name="BotaoContorno" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:layout_height">@dimen/altura_campo</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">@dimen/raio_pilula</item>
+        <item name="strokeColor">@color/white</item>
+        <item name="strokeWidth">1.5dp</item>
+    </style>
+
+    <!-- ===== Textos ===== -->
+    <style name="TituloCard">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/preto_texto</item>
+        <item name="android:textSize">@dimen/texto_titulo_card</item>
+    </style>
+
+    <style name="LinkVenus">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:textColor">@color/roxo_link</item>
+        <item name="android:textSize">@dimen/texto_link</item>
+    </style>
+
+    <!-- ===== Questionario ===== -->
+
+    <!-- Botao circular de avancar, canto inferior direito -->
+    <style name="BotaoAvancar">
+        <item name="android:layout_width">@dimen/botao_circular</item>
+        <item name="android:layout_height">@dimen/botao_circular</item>
+        <item name="android:background">@drawable/bg_botao_circular</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:src">@drawable/ic_seta_avancar</item>
+    </style>
+
+    <!-- Cada alternativa da pergunta -->
+    <style name="OpcaoPergunta">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/altura_opcao</item>
+        <item name="android:background">@drawable/bg_opcao</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/preto_texto</item>
+        <item name="android:textSize">@dimen/texto_campo</item>
+    </style>
+
+    <!-- Link branco sublinhado sobre o fundo roxo -->
+    <style name="LinkClaro">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/texto_corpo</item>
+    </style>
+
+    <!-- ===== Botao de voltar ===== -->
+    <style name="BotaoVoltar">
+        <item name="android:layout_width">@dimen/area_toque_minima</item>
+        <item name="android:layout_height">@dimen/area_toque_minima</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:src">@drawable/ic_seta_voltar</item>
+    </style>
+
+</resources>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "202778983120",
+    "project_id": "venus-81bac",
+    "storage_bucket": "venus-81bac.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:202778983120:android:99d2ad7b5286b94a1fbcd5",
+        "android_client_info": {
+          "package_name": "com.venussystem.venusmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "202778983120-qfsov73tgoe5cr2mr11decbpn7j657bh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.venussystem.venusmobile",
+            "certificate_hash": "f72fb7f39775c5751f092962386e0b1bd54f8021"
+          }
+        },
+        {
+          "client_id": "202778983120-0v0cj0ulcdre1u0doo939kabniq7hn57.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBj1j8WlO0FbvUwdegvYV2pQDzkrQ5qeeo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "202778983120-0v0cj0ulcdre1u0doo939kabniq7hn57.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

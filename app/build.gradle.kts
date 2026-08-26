@@ -1,15 +1,16 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.google.services)
 }
 
 android {
-    namespace = "com.example.venusmobile"
+    namespace = "com.venussystem.venusmobile"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.example.venusmobile"
+        applicationId = "com.venussystem.venusmobile"
         minSdk = 33
         targetSdk = 36
         versionCode = 1
@@ -40,6 +41,17 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.lifecycle.viewmodel)
     implementation(libs.lifecycle.livedata)
+
+    // A BoM define as versoes de todas as libs do Firebase: nao coloque
+    // versao nas linhas de firebase-* abaixo, ela vem daqui.
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.auth)
+
+    // Login com Google. O GoogleSignInClient antigo esta descontinuado;
+    // o caminho atual e o Credential Manager.
+    implementation(libs.credentials)
+    implementation(libs.credentials.play.services)
+    implementation(libs.googleid)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

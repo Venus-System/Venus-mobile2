@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradiente_venus"
+    tools:context=".view.PesquisaInicialActivity">
+
+    <ImageButton
+        android:id="@+id/btnVoltar"
+        style="@style/BotaoVoltar"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="@string/desc_voltar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- A forma roxa ja vem embutida na imagem -->
+    <ImageView
+        android:id="@+id/imgPesquisa"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:importantForAccessibility="no"
+        android:scaleType="fitCenter"
+        android:src="@drawable/pesquisadeusario"
+        app:layout_constraintBottom_toTopOf="@+id/textTitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVoltar"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <TextView
+        android:id="@+id/textTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/espaco_secao"
+        android:layout_marginEnd="@dimen/espaco_secao"
+        android:layout_marginBottom="@dimen/espaco_pequeno"
+        android:text="@string/pesquisa_titulo"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textSubtitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textSubtitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/espaco_secao"
+        android:layout_marginEnd="@dimen/espaco_secao"
+        android:layout_marginBottom="@dimen/espaco_secao"
+        android:text="@string/pesquisa_subtitulo"
+        android:textColor="@color/white"
+        android:textSize="@dimen/texto_corpo"
+        app:layout_constraintBottom_toTopOf="@+id/textResponderDepois"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textResponderDepois"
+        style="@style/LinkClaro"
+        android:layout_marginStart="@dimen/espaco_grande"
+        android:layout_marginBottom="@dimen/espaco_secao"
+        android:text="@string/pesquisa_responder_depois"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnAvancar"
+        style="@style/BotaoAvancar"
+        android:layout_marginEnd="@dimen/espaco_grande"
+        android:contentDescription="@string/desc_avancar"
+        app:layout_constraintBottom_toBottomOf="@+id/textResponderDepois"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textResponderDepois" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

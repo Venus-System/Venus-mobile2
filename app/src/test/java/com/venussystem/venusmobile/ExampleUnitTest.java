@@ -1,4 +1,4 @@
-package com.example.venusmobile;
+package com.venussystem.venusmobile;
 
 import org.junit.Test;
 
