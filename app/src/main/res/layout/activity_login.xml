@@ -8,7 +8,6 @@
     android:background="@drawable/bg_gradiente_venus"
     tools:context=".view.LoginActivity">
 
-    <!-- Card ocupa 72% da tela: sem rolagem, tudo precisa caber de uma vez -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineCardTopo"
         android:layout_width="wrap_content"
@@ -29,7 +28,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Forma roxa decorativa. Primeira da lista = desenhada atrás de tudo -->
     <ImageView
         android:id="@+id/imgFormaFundo"
         android:layout_width="364dp"
@@ -43,8 +41,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent="0.75"
         app:srcCompat="@drawable/vector_login" />
-
-    <!-- Ilustração: ocupa a área roxa acima do card -->
 
     <ImageView
         android:id="@+id/imgCosmeticos"
@@ -110,7 +106,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editEmail" />
 
-        <!-- drawableEnd desenha o olho; o toggle em si precisa de codigo -->
         <EditText
             android:id="@+id/editSenha"
             style="@style/CampoVenus"
@@ -131,7 +126,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editSenha" />
 
-        <!-- AppCompatButton, não Button: MaterialButton ignora android:background -->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnLogar"
             style="@style/BotaoGradiente"

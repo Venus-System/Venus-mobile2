@@ -1,22 +1,18 @@
 <resources>
     <string name="app_name">VenusMobile</string>
 
-    <!-- Bem vindo -->
     <string name="bem_vindo_titulo">Bem vindo</string>
     <string name="bem_vindo_subtitulo">Cuide da sua beleza de forma simples</string>
 
-    <!-- Acoes -->
     <string name="acao_criar_conta">Criar conta</string>
     <string name="acao_entrar">Entrar</string>
     <string name="acao_logar">Logar</string>
     <string name="acao_enviar_email">Enviar email</string>
 
-    <!-- Rotulos dos campos -->
     <string name="campo_nome">Nome</string>
     <string name="campo_email">Email</string>
     <string name="campo_senha">Senha</string>
 
-    <!-- Textos de exemplo dentro dos campos -->
     <string name="hint_nome">Como podemos te chamar</string>
     <string name="hint_email">voce@email.com</string>
     <string name="hint_senha">Mínimo 8 caracteres</string>
@@ -25,59 +21,76 @@
     <string name="acao_fazer_login">Fazer Login</string>
     <string name="desc_mostrar_senha">Mostrar senha</string>
 
-    <!-- Estados durante a requisicao -->
     <string name="estado_entrando">Entrando…</string>
     <string name="estado_criando_conta">Criando conta…</string>
     <string name="estado_enviando">Enviando…</string>
 
-    <!-- Retornos -->
     <string name="login_sucesso">Login realizado com sucesso</string>
     <string name="cadastro_sucesso">Conta criada com sucesso</string>
     <string name="recuperar_email_enviado">Se este email estiver cadastrado, enviamos um link para redefinir a senha. Verifique também a caixa de spam.</string>
     <string name="erro_google">Não foi possível entrar com o Google. Tente novamente.</string>
 
-    <!-- Questionario -->
     <string name="pesquisa_titulo">Pesquisa de usuário</string>
     <string name="pesquisa_subtitulo">Suas respostas vão nos ajudar a personalizar suas análises de produtos.</string>
     <string name="pesquisa_responder_depois"><u>Responder mais tarde →</u></string>
 
     <string name="pergunta_tipo_cabelo">Qual seu tipo de cabelo?</string>
-    <!-- O <u> é interpretado pelo TextView: sublinha sem precisar de código -->
     <string name="pergunta_ajuda_cabelo"><u>Qual é meu tipo de cabelo?</u></string>
     <string name="pergunta_escolha_uma">Escolha uma opção para continuar</string>
 
     <string name="cabelo_1">1</string>
     <string name="cabelo_2a">2A</string>
+    <string name="cabelo_2b">2B</string>
     <string name="cabelo_2c">2C</string>
     <string name="cabelo_3a">3A</string>
     <string name="cabelo_3b">3B</string>
     <string name="cabelo_3c">3C</string>
 
     <string name="desc_avancar">Avançar</string>
+    <string name="acao_avancar">Avançar</string>
 
-    <!-- Menu provisorio -->
+    <!-- Sobreposicao de ajuda: tipos de cabelo -->
+    <string name="sheet_cabelo_titulo">Qual é o seu tipo de cabelo?</string>
+    <string name="sheet_cabelo_descricao">Compare o seu fio com os desenhos e escolha o mais parecido. Na dúvida entre dois, fique com o mais próximo.</string>
+    <string name="sheet_entendi">Entendi</string>
+    <string name="desc_fechar">Fechar</string>
+
+    <string name="sheet_secao_liso">Liso</string>
+    <string name="sheet_secao_ondulado">Ondulado</string>
+    <string name="sheet_secao_cacheado">Cacheado</string>
+
+    <string name="sheet_tipo_2a">2a</string>
+    <string name="sheet_tipo_2b">2b</string>
+    <string name="sheet_tipo_2c">2c</string>
+    <string name="sheet_tipo_3a">3a</string>
+    <string name="sheet_tipo_3b">3b</string>
+    <string name="sheet_tipo_3c">3c</string>
+
+    <string name="sheet_desc_1">Sem ondas, cai reto</string>
+    <string name="sheet_desc_2a">Onda leve, quase reto</string>
+    <string name="sheet_desc_2b">Onda em S definida</string>
+    <string name="sheet_desc_2c">Onda marcada, quase cacho</string>
+    <string name="sheet_desc_3a">Cacho largo e solto</string>
+    <string name="sheet_desc_3b">Cacho médio, bem definido</string>
+    <string name="sheet_desc_3c">Cacho fechado e volumoso</string>
+
     <string name="menu_provisorio">Menu</string>
     <string name="menu_logado_como">Logado como %1$s\n%2$s</string>
     <string name="menu_sem_usuario">Nenhum usuário autenticado</string>
     <string name="acao_sair">Sair</string>
-    <string name="acao_refazer_questionario"><u>Refazer questionário (teste)</u></string>
-    <string name="questionario_reiniciado">Questionário liberado. Saia e entre de novo.</string>
+    <string name="acao_refazer_questionario">Voltar ao login e refazer perguntas</string>
+    <string name="questionario_reiniciado">Sessão encerrada e perguntas liberadas</string>
 
-    <!-- Login -->
     <string name="login_titulo">Entrar</string>
     <string name="login_esqueci_senha">Esqueci minha senha</string>
 
-    <!-- Cadastro -->
     <string name="cadastro_titulo">Cadastrar</string>
 
-    <!-- Recuperar senha -->
     <string name="recuperar_titulo">Recuperar senha</string>
     <string name="recuperar_subtitulo">Coloque o email que você quer alterar a senha</string>
 
-    <!-- Login social -->
     <string name="ou_entre_com">Ou entre com</string>
 
-    <!-- Descricoes para leitor de tela -->
     <string name="desc_voltar">Voltar</string>
     <string name="desc_entrar_google">Entrar com o Google</string>
     <string name="desc_cadastrar_google">Cadastrar com o Google</string>

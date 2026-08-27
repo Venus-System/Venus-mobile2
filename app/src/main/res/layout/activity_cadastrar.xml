@@ -8,8 +8,6 @@
     android:background="@drawable/bg_gradiente_venus"
     tools:context=".view.CadastrarActivity">
 
-    <!-- Card ocupa 80% da tela: sao 3 campos com rotulo, e sem rolagem
-         tudo precisa caber de uma vez. Sobra pouco da ilustracao, e proposital. -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineCardTopo"
         android:layout_width="wrap_content"
@@ -29,10 +27,6 @@
         android:src="@drawable/ic_seta_voltar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- Forma roxa decorativa. Primeira da lista = desenhada atrás de tudo -->
-
-    <!-- Ilustração: ocupa a área roxa acima do card -->
 
     <ImageView
         android:id="@+id/imageView"
@@ -112,7 +106,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editEmail" />
 
-        <!-- drawableEnd desenha o olho; o toggle em si precisa de codigo -->
         <EditText
             android:id="@+id/editSenha"
             style="@style/CampoVenus"
@@ -134,7 +127,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editSenha" />
 
-        <!-- AppCompatButton, não Button: MaterialButton ignora android:background -->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnCriarConta"
             style="@style/BotaoGradiente"

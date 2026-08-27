@@ -1,13 +1,6 @@
 package com.venussystem.venusmobile.model;
 
-/**
- * Resultado de uma operacao de autenticacao.
- *
- * A mensagem de erro que chega aqui ja vem traduzida pelo repository —
- * a tela nunca precisa interpretar excecao do Firebase.
- */
 public class ResultadoAuth {
-
     private final boolean sucesso;
     private final String erro;
 

@@ -16,14 +16,7 @@ import com.google.firebase.auth.UserProfileChangeRequest;
 import com.venussystem.venusmobile.model.ResultadoAuth;
 import com.venussystem.venusmobile.model.Usuario;
 
-/**
- * Unica classe do app que importa FirebaseAuth.
- *
- * Se um dia a autenticacao virar API propria, so este arquivo muda —
- * ViewModels e telas continuam iguais.
- */
 public class AutenticacaoRepository {
-
     private final FirebaseAuth auth = FirebaseAuth.getInstance();
 
     public LiveData<ResultadoAuth> cadastrar(String nome, String email, String senha) {
@@ -34,7 +27,7 @@ public class AutenticacaoRepository {
                 resultado.setValue(ResultadoAuth.erro(traduzirErro(task.getException())));
                 return;
             }
-            // O Firebase Auth nao guarda nome por padrao: precisa gravar no perfil.
+
             FirebaseUser usuario = auth.getCurrentUser();
             if (usuario == null) {
                 resultado.setValue(ResultadoAuth.sucesso());
@@ -43,8 +36,7 @@ public class AutenticacaoRepository {
             UserProfileChangeRequest perfil = new UserProfileChangeRequest.Builder()
                     .setDisplayName(nome)
                     .build();
-            // So avisa sucesso depois que o nome gravou, senao a proxima tela
-            // pode ler um displayName ainda vazio.
+
             usuario.updateProfile(perfil)
                     .addOnCompleteListener(t -> resultado.setValue(ResultadoAuth.sucesso()));
         });
@@ -71,8 +63,7 @@ public class AutenticacaoRepository {
                 resultado.setValue(ResultadoAuth.sucesso());
                 return;
             }
-            // Conta inexistente nao vira erro de proposito: confirmar que um
-            // email nao existe permite descobrir quem tem conta no app.
+
             if (task.getException() instanceof FirebaseAuthInvalidUserException) {
                 resultado.setValue(ResultadoAuth.sucesso());
                 return;
@@ -83,11 +74,7 @@ public class AutenticacaoRepository {
         return resultado;
     }
 
-    /**
-     * Troca o token de identidade do Google por uma sessao do Firebase.
-     * Quem obtem esse token e a tela, via Credential Manager — aqui so
-     * entra o passo do Firebase.
-     */
+    
     public LiveData<ResultadoAuth> entrarComGoogle(String idTokenGoogle) {
         MutableLiveData<ResultadoAuth> resultado = new MutableLiveData<>();
 
@@ -104,7 +91,7 @@ public class AutenticacaoRepository {
         auth.signOut();
     }
 
-    /** Retorna null quando ninguem esta logado. */
+    
     public Usuario usuarioLogado() {
         FirebaseUser usuario = auth.getCurrentUser();
         if (usuario == null) {

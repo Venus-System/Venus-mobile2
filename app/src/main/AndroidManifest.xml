@@ -24,8 +24,6 @@
             android:name=".view.RecuperarSenhaActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
-        <!-- adjustPan e nao adjustResize: sem rolagem, encolher a janela
-             cortaria o card. O pan desliza a tela para manter o campo visivel. -->
         <activity
             android:name=".view.CadastrarActivity"
             android:exported="false"

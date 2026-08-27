@@ -10,8 +10,7 @@ import com.venussystem.venusmobile.repository.AutenticacaoRepository;
 import java.util.regex.Pattern;
 
 public class CadastrarViewModel extends ViewModel {
-
-    /** Regex propria em vez de android.util.Patterns: mantem a classe testavel sem Android. */
+    
     private static final Pattern EMAIL = Pattern.compile("^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$");
     private static final int SENHA_MINIMA = 8;
 
@@ -44,7 +43,6 @@ public class CadastrarViewModel extends ViewModel {
     }
 
     public void cadastrar(String nome, String email, String senha) {
-        // Ignora toque repetido enquanto a requisicao anterior nao voltou.
         if (Boolean.TRUE.equals(carregando.getValue())) {
             return;
         }
@@ -65,7 +63,7 @@ public class CadastrarViewModel extends ViewModel {
                 });
     }
 
-    /** Recebe o token que a tela obteve do Google e troca por sessao no Firebase. */
+    
     public void entrarComGoogle(String idToken) {
         carregando.setValue(true);
         repository.entrarComGoogle(idToken)
@@ -75,7 +73,7 @@ public class CadastrarViewModel extends ViewModel {
                 });
     }
 
-    /** A tela avisa quando o seletor do Google falhou, antes de chegar no Firebase. */
+    
     public void falhaGoogle(String mensagem) {
         carregando.setValue(false);
         resultado.setValue(ResultadoAuth.erro(mensagem));
@@ -85,7 +83,7 @@ public class CadastrarViewModel extends ViewModel {
         carregando.setValue(false);
     }
 
-    /** Valida os tres campos e devolve true so quando nenhum tem erro. */
+    
     private boolean validar(String nome, String email, String senha) {
         erroNome.setValue(null);
         erroEmail.setValue(null);

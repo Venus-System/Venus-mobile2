@@ -7,13 +7,13 @@
 
             <gradient
                 android:angle="0"
-                android:startColor="@color/magenta_venus"
-                android:endColor="@color/vinho_escuro"
+                android:startColor="#FF5B0FA8"
+                android:endColor="#FF8C1556"
                 android:type="linear" />
 
             <stroke
                 android:width="1.5dp"
-                android:color="@color/magenta_venus" />
+                android:color="@color/white" />
 
             <corners android:radius="@dimen/raio_pilula" />
 

@@ -16,9 +16,7 @@ import com.google.android.libraries.identity.googleid.GetGoogleIdOption;
 import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential;
 import com.venussystem.venusmobile.R;
 
-
 public class LoginGoogleHelper {
-
     public interface Callback {
         void aoObterToken(String idToken);
 
@@ -36,7 +34,6 @@ public class LoginGoogleHelper {
     }
 
     public void iniciar(Callback callback) {
-
         String webClientId = activity.getString(R.string.default_web_client_id);
 
         GetGoogleIdOption opcaoGoogle = new GetGoogleIdOption.Builder()

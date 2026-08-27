@@ -17,7 +17,6 @@ import com.venussystem.venusmobile.R;
 import com.venussystem.venusmobile.viewmodel.CadastrarViewModel;
 
 public class CadastrarActivity extends AppCompatActivity {
-
     private CadastrarViewModel viewModel;
     private EditText editNome;
     private EditText editEmail;
@@ -31,11 +30,9 @@ public class CadastrarActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cadastrar);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            // Sem padding embaixo na raiz: o card precisa encostar na borda.
+
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0);
-            // O respiro da barra de navegação vai no conteúdo do card.
-            // O teclado não entra na conta: quem cuida dele é o adjustPan.
-            // Preserva o padding lateral do XML: setPadding sobrescreve os quatro lados.
+
             View card = findViewById(R.id.cardCadastrar);
             card.setPadding(card.getPaddingLeft(), card.getPaddingTop(),
                     card.getPaddingRight(), systemBars.bottom);
@@ -98,8 +95,7 @@ public class CadastrarActivity extends AppCompatActivity {
             }
             if (resultado.isSucesso()) {
                 Toast.makeText(this, R.string.cadastro_sucesso, Toast.LENGTH_LONG).show();
-                // O cadastro ja deixa o usuario autenticado: segue o mesmo
-                // caminho do login, sem passar pela tela de entrar.
+
                 NavegacaoPosLogin.seguir(this);
             } else {
                 Toast.makeText(this, resultado.getErro(), Toast.LENGTH_LONG).show();

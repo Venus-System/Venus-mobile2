@@ -17,7 +17,6 @@ import com.venussystem.venusmobile.R;
 import com.venussystem.venusmobile.viewmodel.RecuperarSenhaViewModel;
 
 public class RecuperarSenhaActivity extends AppCompatActivity {
-
     private RecuperarSenhaViewModel viewModel;
     private EditText editEmail;
     private AppCompatButton btnEnviarEmail;
@@ -30,10 +29,9 @@ public class RecuperarSenhaActivity extends AppCompatActivity {
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             Insets teclado = insets.getInsets(WindowInsetsCompat.Type.ime());
-            // Sem padding embaixo: o card precisa encostar na borda da tela.
+
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0);
-            // O respiro vai no card: com o teclado aberto ele cresce, e o
-            // conteúdo rola por cima em vez de ficar escondido.
+
             int folga = Math.max(teclado.bottom, systemBars.bottom);
             findViewById(R.id.cardRecuperar).setPadding(0, 0, 0, folga);
             return insets;
@@ -67,8 +65,6 @@ public class RecuperarSenhaActivity extends AppCompatActivity {
                 return;
             }
             if (resultado.isSucesso()) {
-                // Texto proposital: nao confirma se a conta existe, para nao
-                // permitir descobrir quais emails estao cadastrados.
                 new AlertDialog.Builder(this)
                         .setTitle(R.string.recuperar_titulo)
                         .setMessage(R.string.recuperar_email_enviado)

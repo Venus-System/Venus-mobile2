@@ -10,7 +10,6 @@ import com.venussystem.venusmobile.repository.AutenticacaoRepository;
 import java.util.regex.Pattern;
 
 public class RecuperarSenhaViewModel extends ViewModel {
-
     private static final Pattern EMAIL = Pattern.compile("^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$");
 
     private final AutenticacaoRepository repository = new AutenticacaoRepository();
