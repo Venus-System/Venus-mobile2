@@ -10,7 +10,6 @@ import com.venussystem.venusmobile.repository.AutenticacaoRepository;
 import java.util.regex.Pattern;
 
 public class LoginViewModel extends ViewModel {
-
     private static final Pattern EMAIL = Pattern.compile("^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$");
 
     private final AutenticacaoRepository repository = new AutenticacaoRepository();
@@ -56,7 +55,7 @@ public class LoginViewModel extends ViewModel {
                 });
     }
 
-    /** Recebe o token que a tela obteve do Google e troca por sessao no Firebase. */
+    
     public void entrarComGoogle(String idToken) {
         carregando.setValue(true);
         repository.entrarComGoogle(idToken)
@@ -66,7 +65,7 @@ public class LoginViewModel extends ViewModel {
                 });
     }
 
-    /** A tela avisa quando o seletor do Google falhou, antes de chegar no Firebase. */
+    
     public void falhaGoogle(String mensagem) {
         carregando.setValue(false);
         resultado.setValue(ResultadoAuth.erro(mensagem));
@@ -76,10 +75,7 @@ public class LoginViewModel extends ViewModel {
         carregando.setValue(false);
     }
 
-    /**
-     * No login nao se valida tamanho de senha: a regra pode ter mudado desde
-     * que a conta foi criada, e recusar antes de tentar confundiria o usuario.
-     */
+    
     private boolean validar(String email, String senha) {
         erroEmail.setValue(null);
         erroSenha.setValue(null);

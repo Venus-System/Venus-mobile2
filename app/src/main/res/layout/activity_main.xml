@@ -8,7 +8,6 @@
     android:background="@drawable/bg_gradiente_venus"
     tools:context=".view.BemVindoActivity">
 
-    <!-- Decorativo. Primeiro da lista = desenhado atrás de todo o resto -->
     <ImageView
         android:id="@+id/imgFormaFundo"
         android:layout_width="0dp"
@@ -44,8 +43,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <!-- Ilustração principal: ocupa toda a folga entre o subtítulo e os botões -->
 
     <ImageView
         android:id="@+id/imgPessoa"

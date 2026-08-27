@@ -14,7 +14,6 @@ import com.venussystem.venusmobile.R;
 import com.venussystem.venusmobile.repository.AutenticacaoRepository;
 
 public class BemVindoActivity extends AppCompatActivity {
-
     private final AutenticacaoRepository repository = new AutenticacaoRepository();
 
     Button btnLogin;
@@ -41,20 +40,11 @@ public class BemVindoActivity extends AppCompatActivity {
                 startActivity(new Intent(this, CadastrarActivity.class)));
     }
 
-    /**
-     * Pulo automatico para quem ja tem sessao ativa.
-     *
-     * DESLIGADO PARA TESTES: com o pulo ligado, quem ja logou uma vez nunca
-     * mais consegue ver esta tela nem a de login sem limpar os dados do app.
-     *
-     * Para religar, basta descomentar o corpo do metodo.
-     */
     @Override
     protected void onStart() {
         super.onStart();
-
-        // if (repository.temSessaoAtiva()) {
-        //     NavegacaoPosLogin.seguir(this);
-        // }
+        if (repository.temSessaoAtiva()) {
+            NavegacaoPosLogin.seguir(this);
+        }
     }
 }

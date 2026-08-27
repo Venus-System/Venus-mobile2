@@ -11,12 +11,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.venussystem.venusmobile.R;
 
-/**
- * Porta de entrada do questionario. O usuario pode comecar a responder
- * ou pular — nos dois casos ele acaba no menu principal.
- */
 public class PesquisaInicialActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +32,6 @@ public class PesquisaInicialActivity extends AppCompatActivity {
     }
 
     private void irParaMenu() {
-        // TODO: trocar por startActivity da tela de menu (Busca) quando existir.
         finish();
     }
 }

@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- ===== Card branco das telas de autenticacao ===== -->
     <style name="CardVenus">
         <item name="android:background">@drawable/bg_card_branco</item>
         <item name="android:paddingStart">@dimen/card_padding_lateral</item>
         <item name="android:paddingEnd">@dimen/card_padding_lateral</item>
     </style>
 
-    <!-- ===== Campos de texto ===== -->
     <style name="CampoVenus">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">@dimen/altura_campo</item>
@@ -21,7 +19,6 @@
         <item name="android:maxLines">1</item>
     </style>
 
-    <!-- Rotulo acima do campo -->
     <style name="LabelCampo">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -29,7 +26,6 @@
         <item name="android:textSize">@dimen/texto_label</item>
     </style>
 
-    <!-- Texto de apoio abaixo do campo -->
     <style name="TextoAjuda">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
@@ -37,7 +33,6 @@
         <item name="android:textSize">@dimen/texto_ajuda</item>
     </style>
 
-    <!-- Botao do Google: branco com borda, igual aos campos -->
     <style name="BotaoGoogle">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">@dimen/altura_campo</item>
@@ -46,10 +41,6 @@
         <item name="android:src">@drawable/ic_google</item>
     </style>
 
-    <!-- ===== Botoes ===== -->
-
-    <!-- Gradiente roxo->magenta. Usar com AppCompatButton: o MaterialButton
-         ignora android:background e o gradiente nao apareceria. -->
     <style name="BotaoGradiente">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">@dimen/altura_campo</item>
@@ -59,7 +50,6 @@
         <item name="android:textSize">@dimen/texto_botao</item>
     </style>
 
-    <!-- Fundo branco, texto roxo (botao "Criar conta" da tela de boas-vindas) -->
     <style name="BotaoBranco" parent="Widget.Material3.Button">
         <item name="android:layout_height">@dimen/altura_campo</item>
         <item name="android:textColor">@color/roxo_venus</item>
@@ -67,7 +57,6 @@
         <item name="cornerRadius">@dimen/raio_pilula</item>
     </style>
 
-    <!-- Contorno branco, fundo transparente (botao "Entrar" da tela de boas-vindas) -->
     <style name="BotaoContorno" parent="Widget.Material3.Button.OutlinedButton">
         <item name="android:layout_height">@dimen/altura_campo</item>
         <item name="android:textColor">@color/white</item>
@@ -76,7 +65,6 @@
         <item name="strokeWidth">1.5dp</item>
     </style>
 
-    <!-- ===== Textos ===== -->
     <style name="TituloCard">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -92,9 +80,6 @@
         <item name="android:textSize">@dimen/texto_link</item>
     </style>
 
-    <!-- ===== Questionario ===== -->
-
-    <!-- Botao circular de avancar, canto inferior direito -->
     <style name="BotaoAvancar">
         <item name="android:layout_width">@dimen/botao_circular</item>
         <item name="android:layout_height">@dimen/botao_circular</item>
@@ -103,7 +88,6 @@
         <item name="android:src">@drawable/ic_seta_avancar</item>
     </style>
 
-    <!-- Cada alternativa da pergunta -->
     <style name="OpcaoPergunta">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">@dimen/altura_opcao</item>
@@ -113,7 +97,6 @@
         <item name="android:textSize">@dimen/texto_campo</item>
     </style>
 
-    <!-- Link branco sublinhado sobre o fundo roxo -->
     <style name="LinkClaro">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -122,7 +105,52 @@
         <item name="android:textSize">@dimen/texto_corpo</item>
     </style>
 
-    <!-- ===== Botao de voltar ===== -->
+    <style name="FioTipoCabelo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/altura_fio</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:importantForAccessibility">no</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="SecaoTipoCabelo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/espaco_medio</item>
+        <item name="android:layout_marginBottom">@dimen/espaco_pequeno</item>
+        <item name="android:textColor">@color/roxo_secao</item>
+        <item name="android:textSize">@dimen/texto_corpo</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CardTipoCabelo">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/espaco_pequeno</item>
+        <item name="android:background">@drawable/bg_item_tipo</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingStart">@dimen/espaco_medio</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingEnd">@dimen/espaco_medio</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
+    <style name="TituloTipoCabelo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/preto_texto</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DescricaoTipoCabelo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/cinza_descricao</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
     <style name="BotaoVoltar">
         <item name="android:layout_width">@dimen/area_toque_minima</item>
         <item name="android:layout_height">@dimen/area_toque_minima</item>

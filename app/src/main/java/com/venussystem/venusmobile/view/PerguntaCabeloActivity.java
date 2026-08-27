@@ -11,12 +11,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.venussystem.venusmobile.R;
 import com.venussystem.venusmobile.repository.PerfilRepository;
 
 public class PerguntaCabeloActivity extends AppCompatActivity {
-
-    /** Guarda a alternativa escolhida. Null enquanto o usuario nao decide. */
+    
     private String respostaSelecionada;
 
     @Override
@@ -35,13 +35,22 @@ public class PerguntaCabeloActivity extends AppCompatActivity {
         prepararOpcoes();
 
         findViewById(R.id.btnAvancar).setOnClickListener(v -> avancar());
+
+        findViewById(R.id.textAjudaCabelo).setOnClickListener(v -> abrirAjudaTipoCabelo());
     }
 
-    /**
-     * Liga o clique em cada alternativa. Percorrer os filhos evita repetir
-     * findViewById para as seis opcoes — e nao muda se voce adicionar mais
-     * alternativas no XML.
-     */
+    private void abrirAjudaTipoCabelo() {
+        BottomSheetDialog sheet = new BottomSheetDialog(this);
+        View conteudo = getLayoutInflater().inflate(R.layout.sheet_tipo_cabelo, null);
+        sheet.setContentView(conteudo);
+
+        conteudo.findViewById(R.id.btnFecharSheet).setOnClickListener(v -> sheet.dismiss());
+        conteudo.findViewById(R.id.btnEntendi).setOnClickListener(v -> sheet.dismiss());
+
+        sheet.show();
+    }
+
+    
     private void prepararOpcoes() {
         LinearLayout lista = findViewById(R.id.listaOpcoes);
         for (int i = 0; i < lista.getChildCount(); i++) {
@@ -51,7 +60,6 @@ public class PerguntaCabeloActivity extends AppCompatActivity {
     }
 
     private void selecionar(LinearLayout lista, View escolhida) {
-        // Desmarca todas antes: o drawable reage a state_selected sozinho.
         for (int i = 0; i < lista.getChildCount(); i++) {
             lista.getChildAt(i).setSelected(false);
         }
@@ -64,8 +72,7 @@ public class PerguntaCabeloActivity extends AppCompatActivity {
             Toast.makeText(this, R.string.pergunta_escolha_uma, Toast.LENGTH_SHORT).show();
             return;
         }
-        // TODO: enviar respostaSelecionada para a API, e seguir para a
-        // proxima pergunta do questionario quando as outras existirem.
+
         new PerfilRepository(this).marcarQuestionarioRespondido();
         NavegacaoPosLogin.irParaMenu(this);
     }

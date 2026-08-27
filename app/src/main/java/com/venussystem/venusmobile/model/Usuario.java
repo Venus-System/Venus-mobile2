@@ -1,11 +1,6 @@
 package com.venussystem.venusmobile.model;
 
-/**
- * Dados do usuario autenticado. Sem logica e sem nada de Android:
- * so guarda o que veio do Firebase.
- */
 public class Usuario {
-
     private final String uid;
     private final String nome;
     private final String email;

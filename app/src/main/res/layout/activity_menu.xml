@@ -49,11 +49,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textUsuario" />
 
-    <TextView
+    <Button
         android:id="@+id/btnRefazerQuestionario"
-        style="@style/LinkClaro"
-        android:layout_marginTop="@dimen/espaco_grande"
+        style="@style/BotaoContorno"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/espaco_secao"
+        android:layout_marginTop="@dimen/espaco_medio"
+        android:layout_marginEnd="@dimen/espaco_secao"
         android:text="@string/acao_refazer_questionario"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

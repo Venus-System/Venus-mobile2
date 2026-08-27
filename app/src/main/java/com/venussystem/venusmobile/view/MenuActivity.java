@@ -16,16 +16,7 @@ import com.venussystem.venusmobile.model.Usuario;
 import com.venussystem.venusmobile.repository.AutenticacaoRepository;
 import com.venussystem.venusmobile.repository.PerfilRepository;
 
-/**
- * PROVISORIA: existe so para o fluxo ter um destino visivel.
- *
- * Sem ela, login e questionario terminavam em finish() e pareciam
- * "voltar para a tela de Bem vindo" — o que confunde na hora de testar.
- *
- * Sera substituida pela tela de Busca com a barra de navegacao inferior.
- */
 public class MenuActivity extends AppCompatActivity {
-
     private final AutenticacaoRepository autenticacao = new AutenticacaoRepository();
 
     @Override
@@ -43,12 +34,17 @@ public class MenuActivity extends AppCompatActivity {
 
         findViewById(R.id.btnSair).setOnClickListener(v -> sair());
 
-        // Atalho de teste: zera a marcacao para o questionario aparecer de novo
-        // no proximo login, sem precisar limpar os dados do app.
-        findViewById(R.id.btnRefazerQuestionario).setOnClickListener(v -> {
-            new PerfilRepository(this).limpar();
-            Toast.makeText(this, R.string.questionario_reiniciado, Toast.LENGTH_SHORT).show();
-        });
+        findViewById(R.id.btnRefazerQuestionario).setOnClickListener(v -> reiniciarTeste());
+    }
+
+    private void reiniciarTeste() {
+        new PerfilRepository(this).limpar();
+        autenticacao.sair();
+        Toast.makeText(this, R.string.questionario_reiniciado, Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(this, LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
     }
 
     private void mostrarUsuario() {
@@ -64,8 +60,7 @@ public class MenuActivity extends AppCompatActivity {
 
     private void sair() {
         autenticacao.sair();
-        // CLEAR_TASK limpa a pilha: sem isso o botao voltar traria de volta
-        // esta tela, ja com o usuario deslogado.
+
         Intent intent = new Intent(this, BemVindoActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);

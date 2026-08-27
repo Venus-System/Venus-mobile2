@@ -19,7 +19,6 @@ import com.venussystem.venusmobile.R;
 import com.venussystem.venusmobile.viewmodel.LoginViewModel;
 
 public class LoginActivity extends AppCompatActivity {
-
     private LoginViewModel viewModel;
     private EditText editEmail;
     private EditText editSenha;
@@ -33,11 +32,9 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            // Sem padding embaixo na raiz: o card precisa encostar na borda.
+
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0);
-            // O respiro da barra de navegação vai no conteúdo do card.
-            // O teclado não entra na conta: quem cuida dele é o adjustPan.
-            // Preserva o padding lateral do XML: setPadding sobrescreve os quatro lados.
+
             View card = findViewById(R.id.cardLogin);
             card.setPadding(card.getPaddingLeft(), card.getPaddingTop(),
                     card.getPaddingRight(), systemBars.bottom);
@@ -100,8 +97,6 @@ public class LoginActivity extends AppCompatActivity {
                 return;
             }
             if (resultado.isSucesso()) {
-                // Primeira entrada vai para o questionario; quem ja respondeu
-                // segue direto para o menu. A regra fica em NavegacaoPosLogin.
                 NavegacaoPosLogin.seguir(this);
             } else {
                 Toast.makeText(this, resultado.getErro(), Toast.LENGTH_LONG).show();
