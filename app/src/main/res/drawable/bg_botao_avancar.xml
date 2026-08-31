@@ -7,13 +7,9 @@
 
             <gradient
                 android:angle="0"
-                android:startColor="#FF5B0FA8"
-                android:endColor="#FF8C1556"
+                android:startColor="@color/roxo_avancar_inicio"
+                android:endColor="@color/roxo_avancar_fim"
                 android:type="linear" />
-
-            <stroke
-                android:width="1.5dp"
-                android:color="@color/white" />
 
             <corners android:radius="@dimen/raio_pilula" />
 

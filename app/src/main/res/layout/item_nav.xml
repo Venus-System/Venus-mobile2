@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- O indicador nao fica mais aqui: agora e uma peca unica na barra,
+     que desliza ate o item escolhido. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="@dimen/altura_barra_nav"
+    android:layout_weight="1"
+    android:background="?attr/selectableItemBackgroundBorderless">
+
+    <ImageView
+        android:id="@+id/iconeNav"
+        android:layout_width="@dimen/icone_nav"
+        android:layout_height="@dimen/icone_nav"
+        android:layout_gravity="center"
+        android:importantForAccessibility="no" />
+
+</FrameLayout>

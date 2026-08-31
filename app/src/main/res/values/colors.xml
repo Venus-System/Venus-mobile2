@@ -17,6 +17,16 @@
     <color name="cinza_fechar">#FFF0F0F3</color>
     <color name="roxo_secao">#FF8B2FD6</color>
     <color name="cinza_descricao">#FF6B6B72</color>
+    <color name="roxo_avancar_inicio">#FF5C1BAA</color>
+    <color name="roxo_avancar_fim">#FF45147A</color>
     <color name="texto_label">#FF3C3C43</color>
     <color name="texto_ajuda">#FF8A8A8F</color>
+    <color name="cinza_nav">#FF9A9AA0</color>
+    <color name="nota_boa">#FF2E9E6B</color>
+    <color name="nota_media">#FFE8A33D</color>
+    <color name="nota_ruim">#FFD94F70</color>
+    <color name="fundo_nav">#FFF6F1FB</color>
+    <color name="magenta_nav">#FFB5197A</color>
+    <color name="rosa_scan_inicio">#FFE3247F</color>
+    <color name="rosa_scan_fim">#FFA81361</color>
 </resources>

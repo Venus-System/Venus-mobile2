@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,6 +13,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VenusMobile" >
+        <activity
+            android:name=".view.PerguntaCouroCabeludoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.PerguntaTipoPeleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.PerguntaSensibilidadeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.PerguntaFototipoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.PerguntaFaixaEtariaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.PerguntaPreferenciaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.PerguntaAlergiaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.PerfilProntoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.PrincipalActivity"
+            android:exported="false" />
         <activity
             android:name=".view.MenuActivity"
             android:exported="false" />

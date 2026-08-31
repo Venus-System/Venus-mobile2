@@ -30,4 +30,10 @@
     <dimen name="texto_label">12sp</dimen>
     <dimen name="texto_ajuda">11sp</dimen>
 
+    <dimen name="botao_scan">62dp</dimen>
+    <dimen name="selo_nota">34dp</dimen>
+    <dimen name="altura_barra_nav">72dp</dimen>
+    <dimen name="foto_produto">86dp</dimen>
+    <dimen name="icone_nav">32dp</dimen>
+    <dimen name="largura_indicador">32dp</dimen>
 </resources>
