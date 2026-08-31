@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/altura_opcao"
+    android:layout_marginBottom="@dimen/espaco_pequeno"
+    android:background="@drawable/bg_chip"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/espaco_medio"
+    android:paddingEnd="@dimen/espaco_pequeno">
+
+    <TextView
+        android:id="@+id/textChip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/preto_texto"
+        android:textSize="@dimen/texto_corpo" />
+
+    <ImageButton
+        android:id="@+id/btnRemoverChip"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/desc_remover"
+        android:scaleType="center"
+        android:src="@drawable/ic_fechar" />
+
+</LinearLayout>

@@ -21,7 +21,7 @@ public class NavegacaoPosLogin {
     }
 
     public static void irParaMenu(Activity origem) {
-        Intent intent = new Intent(origem, MenuActivity.class);
+        Intent intent = new Intent(origem, PrincipalActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         origem.startActivity(intent);
     }

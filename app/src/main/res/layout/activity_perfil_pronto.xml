@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradiente_venus"
+    tools:context=".view.PerfilProntoActivity">
+
+    <ImageButton
+        android:id="@+id/btnVoltar"
+        style="@style/BotaoVoltar"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/desc_voltar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgParabens"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:importantForAccessibility="no"
+        android:scaleType="fitCenter"
+        android:src="@drawable/parabens"
+        app:layout_constraintBottom_toTopOf="@+id/textTitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVoltar"
+        app:layout_constraintWidth_percent="0.92" />
+
+    <TextView
+        android:id="@+id/textTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/espaco_grande"
+        android:layout_marginEnd="@dimen/espaco_grande"
+        android:layout_marginBottom="@dimen/espaco_medio"
+        android:lineSpacingMultiplier="1.05"
+        android:text="@string/perfil_pronto_titulo"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textResumo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textResumo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/espaco_grande"
+        android:layout_marginEnd="@dimen/espaco_grande"
+        android:layout_marginBottom="@dimen/espaco_medio"
+        android:text="@string/perfil_pronto_resumo"
+        android:textColor="@color/white"
+        android:textSize="@dimen/texto_corpo"
+        app:layout_constraintBottom_toTopOf="@+id/textDetalhe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textDetalhe"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/espaco_grande"
+        android:layout_marginEnd="@dimen/espaco_grande"
+        android:layout_marginBottom="@dimen/espaco_secao"
+        android:alpha="0.85"
+        android:text="@string/perfil_pronto_detalhe"
+        android:textColor="@color/white"
+        android:textSize="@dimen/texto_corpo"
+        app:layout_constraintBottom_toTopOf="@+id/btnAvancar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAvancar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/altura_campo"
+        android:layout_marginStart="@dimen/espaco_grande"
+        android:layout_marginEnd="@dimen/espaco_grande"
+        android:layout_marginBottom="@dimen/espaco_grande"
+        android:background="@drawable/bg_botao_avancar"
+        android:text="@string/perfil_pronto_acao"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/texto_botao"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

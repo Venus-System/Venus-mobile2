@@ -52,6 +52,11 @@ dependencies {
     implementation(libs.credentials)
     implementation(libs.credentials.play.services)
     implementation(libs.googleid)
+
+    implementation(libs.fragment)
+    implementation(libs.recyclerview)
+    // Carrega imagem de URL: o ImageView sozinho nao busca da rede.
+    implementation(libs.coil)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

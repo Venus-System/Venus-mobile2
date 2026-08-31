@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">VenusMobile</string>
+    <string name="app_name">Venus</string>
 
     <string name="bem_vindo_titulo">Bem vindo</string>
     <string name="bem_vindo_subtitulo">Cuide da sua beleza de forma simples</string>
@@ -36,6 +36,65 @@
 
     <string name="pergunta_tipo_cabelo">Qual seu tipo de cabelo?</string>
     <string name="pergunta_ajuda_cabelo"><u>Qual é meu tipo de cabelo?</u></string>
+
+    <!-- Couro cabeludo -->
+    <string name="pergunta_couro">Como é seu couro cabeludo?</string>
+    <string name="ajuda_couro"><u>Qual é seu couro cabeludo?</u></string>
+    <string name="couro_normal">Normal</string>
+    <string name="couro_seco">Seco</string>
+    <string name="couro_sensivel">Sensível</string>
+    <string name="couro_oleoso">Oleoso</string>
+    <string name="couro_caspa">Com Caspa</string>
+    <string name="couro_outro">Não sei/Outro</string>
+
+    <!-- Tipo de pele -->
+    <string name="pergunta_tipo_pele">Qual seu tipo de pele?</string>
+    <string name="ajuda_tipo_pele"><u>Qual é meu tipo de pele?</u></string>
+    <string name="pele_oleoso">Oleoso</string>
+    <string name="pele_misto">Misto</string>
+    <string name="pele_seca">Seca</string>
+    <string name="pele_normal">Normal</string>
+    <string name="pele_sensivel">Sensível</string>
+
+    <!-- Sensibilidade da pele -->
+    <string name="pergunta_sensibilidade">Qual a sensibilidade da sua pele?</string>
+    <string name="ajuda_sensibilidade"><u>Qual é a sensibilidade da minha pele?</u></string>
+    <string name="sens_baixa">Baixa</string>
+    <string name="sens_media">Média</string>
+    <string name="sens_alta">Alta</string>
+
+    <!-- Fototipo -->
+    <string name="pergunta_fototipo">Qual o seu fototipo de pele?</string>
+    <string name="ajuda_fototipo"><u>Qual é meu fotótipo?</u></string>
+    <string name="foto_i">I</string>
+    <string name="foto_ii">II</string>
+    <string name="foto_iii">III</string>
+    <string name="foto_iv">IV</string>
+    <string name="foto_v">V</string>
+    <string name="foto_vi">VI</string>
+
+    <!-- Faixa etaria -->
+    <string name="pergunta_faixa_etaria">Qual sua faixa etária?</string>
+    <string name="faixa_menos_13">Menos de 13</string>
+    <string name="faixa_13_17">Entre 13 e 17</string>
+    <string name="faixa_18_24">Entre 18 e 24</string>
+    <string name="faixa_25_34">Entre 25 e 34</string>
+    <string name="faixa_35_44">Entre 35 e 44</string>
+    <string name="faixa_45_54">Entre 45 e 54</string>
+    <string name="faixa_acima_55">Acima de 55</string>
+
+    <!-- Preferencias e alergias: busca com selecao multipla -->
+    <string name="pergunta_preferencia">Você possui alguma preferência?</string>
+    <string name="pergunta_alergia">Você possui alguma alergia?</string>
+    <string name="hint_buscar_preferencia">Pesquisar preferência</string>
+    <string name="hint_buscar_alergia">Pesquisar alergia</string>
+    <string name="desc_remover">Remover</string>
+
+    <!-- Fim do questionario -->
+    <string name="perfil_pronto_titulo">Seu perfil está pronto! :)</string>
+    <string name="perfil_pronto_resumo">Agora o &lt;b>Venus&lt;/b> já conhece um pouco melhor suas &lt;b>necessidades&lt;/b> e &lt;b>preferências&lt;/b>.</string>
+    <string name="perfil_pronto_detalhe">Essas informações serão usadas para personalizar suas análises de produtos e destacar o que é mais relevante para você.</string>
+    <string name="perfil_pronto_acao">Começar</string>
     <string name="pergunta_escolha_uma">Escolha uma opção para continuar</string>
 
     <string name="cabelo_1">1</string>
@@ -95,4 +154,17 @@
     <string name="desc_entrar_google">Entrar com o Google</string>
     <string name="desc_cadastrar_google">Cadastrar com o Google</string>
 
+
+    <!-- Navegacao principal -->
+    <string name="nav_inicio">Histórico</string>
+    <string name="nav_busca">Busca</string>
+    <string name="nav_scan">Escanear</string>
+    <string name="nav_listas">Minhas listas</string>
+    <string name="nav_perfil">Perfil</string>
+    <string name="nav_assistente">Assistente</string>
+    <string name="em_breve">Em breve</string>
+    <string name="hint_buscar_produto">Buscar produtos, ingredientes, marcas…</string>
+    <string name="busca_sem_resultado">Nenhum produto encontrado</string>
+    <string name="nota_indisponivel">—</string>
+    <string name="acao_reiniciar_teste">reiniciar teste</string>
 </resources>
